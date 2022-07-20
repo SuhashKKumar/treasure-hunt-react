@@ -68,7 +68,7 @@
 input,
 textarea {
   border: none;
-
+  font-family:'Barlow Condensed', sans-serif !important;
   border-bottom: 3px solid #fd7c2b !important;
   background: none;
   width: 65%;

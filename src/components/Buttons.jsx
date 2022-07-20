@@ -1,6 +1,6 @@
 import Button from "@mui/material/Button";
 import '../styles/Buttons.css'
-import React,{useState} from 'react'
+import React from 'react'
 
 const Buttons = ({name, className, CookiesHandler}) => {
   // const [cookies, setCookies]=useState(false)

@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React from 'react'
 import '../styles/Cookies.css'
 import Buttons from './Buttons';
 const Cookies = ({cookies, setCookies}) => {

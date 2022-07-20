@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import "../styles/CorrectPath.css";
 import ParticlesComponent from "../Utils/Particles";
 import Button from "@mui/material/Button";

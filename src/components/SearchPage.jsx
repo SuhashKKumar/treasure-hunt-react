@@ -27,7 +27,7 @@ const SearchPage = (props) => {
       <div className="homepage">
         <div className="homepage">
           <h1 className="homepage_title">The treasure is here</h1>
-          <h4>Search with our team members FirstName to find the treasure</h4>
+          <h4>Search with your team members FirstName to find the treasure</h4>
           <input
             placeholder="Search & Enter"
             onChange={changeHandler}

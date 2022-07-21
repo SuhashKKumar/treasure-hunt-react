@@ -19,6 +19,6 @@
 }
 .wrong_entry  Button{
     justify-self: flex-start;
-    width: 100% !important;
+    /* width: 100% !important; */
 
 }

@@ -5,7 +5,7 @@ import Buttons from "./Buttons";
 import Footer from "./Footer";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Fade from "react-reveal/Fade";
+
 
 const HomePage = ({ setPathName }) => {
   const [name, setName] = useState("");
@@ -43,8 +43,8 @@ const HomePage = ({ setPathName }) => {
   };
   return (
     <div className="homepage_parent">
+        
       <div className="homepage">
-        <Fade bottom>
           <div className="homepage">
             <ToastContainer style={{fontSize:'2rem'}} />
             <h3>{adventure ? "" : "Welcome to"} </h3>
@@ -82,8 +82,8 @@ const HomePage = ({ setPathName }) => {
               name={"Join adventure"}
             />
           )}
-        </Fade>
       </div>
+        
       <Footer />
     </div>
   );

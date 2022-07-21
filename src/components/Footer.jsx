@@ -14,7 +14,7 @@ const Footer = () => {
     <div className="homepage_child2">
       <Cookies cookies={cookies} setCookies={setCookies} />
       <footer>
-        <p className="footer_para" >
+        <p className="footer_para">
           Our site uses cookies, by continuing to our website you agree to our
           privacy policy
         </p>

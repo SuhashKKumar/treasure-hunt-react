@@ -5,6 +5,7 @@ import { db } from "../Utils/Firebase";
 import { addDoc, collection } from "firebase/firestore";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Fade from 'react-reveal/Fade';
 
 const FeedbackForm = ({ form, setForm }) => {
   const defaultFormFields = {
@@ -80,7 +81,9 @@ const FeedbackForm = ({ form, setForm }) => {
   };
   return (
     <div className="form_container" style={styles.forms}>
-      <ToastContainer />
+      <ToastContainer style={{fontSize:'2rem'}} />
+      <Fade bottom>
+
       <div className="form">
         <h3>Feedback Form</h3>
         <input
@@ -114,6 +117,7 @@ const FeedbackForm = ({ form, setForm }) => {
           <Buttons name="Submit Feedback" CookiesHandler={FormHandler} />
         </div>
       </div>
+      </Fade>
     </div>
   );
 };

@@ -67,7 +67,7 @@ html{
   } 
   .form{
     height: 35rem !important;
-    left: -8vw !important;
+    left: -1vw !important;
   }
   .form input, .form textarea{
     font-size: 2.3rem !important;

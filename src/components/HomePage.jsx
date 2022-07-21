@@ -5,6 +5,7 @@ import Buttons from "./Buttons";
 import Footer from "./Footer";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Fade from "react-reveal/Fade";
 
 const HomePage = ({ setPathName }) => {
   const [name, setName] = useState("");
@@ -22,14 +23,14 @@ const HomePage = ({ setPathName }) => {
     if (name === "") {
       toast.warn("Please enter valid value!", {
         position: "top-right",
-        theme:'dark',
+        theme: "dark",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        closeButton:false,
+        closeButton: false,
       });
     } else {
       name === ""
@@ -43,42 +44,45 @@ const HomePage = ({ setPathName }) => {
   return (
     <div className="homepage_parent">
       <div className="homepage">
-        <div className="homepage">
-          <ToastContainer/>
-          <h3>{adventure ? "" : "Welcome to"} </h3>
-          <h1 className="homepage_title">
-            {adventure ? "The treasure is here" : "Treasure Hunt"}
-          </h1>
+        <Fade bottom>
+          <div className="homepage">
+            <ToastContainer style={{ fontSize: "2rem" }} />
+            <h3>{adventure ? "" : "Welcome to"} </h3>
+            <h1 className="homepage_title">
+              {adventure ? "The treasure is here" : "Treasure Hunt"}
+            </h1>
 
-          <h4>
-            {adventure
-              ? " Search with your team members FirstName to find the treasure"
-              : `Click on "Join Adventure" to start hunting`}
-          </h4>
+            <h4>
+              {adventure
+                ? " Search with your team members FirstName to find the treasure"
+                : `Click on "Join Adventure" to start hunting`}
+            </h4>
+            {adventure ? (
+              <input
+                placeholder="Search & Enter"
+                onChange={changeHandler}
+                value={name}
+                type="text"
+              />
+            ) : (
+              ""
+            )}
+          </div>
+
           {adventure ? (
-            <input
-              placeholder="Search & Enter"
-              onChange={changeHandler}
-              value={name}
-              type="text"
+            <Buttons
+              className={"contained"}
+              name={"Begin hunt"}
+              CookiesHandler={SearchHandler}
             />
           ) : (
-            ""
+            <Buttons
+              CookiesHandler={StartHandler}
+              className={"contained"}
+              name={"Join adventure"}
+            />
           )}
-        </div>
-        {adventure ? (
-          <Buttons
-            className={"contained"}
-            name={"Begin hunt"}
-            CookiesHandler={SearchHandler}
-          />
-        ) : (
-          <Buttons
-            CookiesHandler={StartHandler}
-            className={"contained"}
-            name={"Join adventure"}
-          />
-        )}
+        </Fade>
       </div>
       <Footer />
     </div>

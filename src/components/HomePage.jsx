@@ -21,7 +21,7 @@ const HomePage = ({ setPathName }) => {
   const SearchHandler = () => {
     setPathName(name.toLowerCase());
     if (name === "") {
-      toast.warn("Please enter valid value!", {
+      toast.warn('Fill the input field and search', {
         position: "top-right",
         theme: "dark",
         autoClose: 5000,
@@ -31,7 +31,7 @@ const HomePage = ({ setPathName }) => {
         draggable: true,
         progress: undefined,
         closeButton: false,
-      });
+        });
     } else {
       name === ""
         ? alert("please enter")
@@ -44,9 +44,9 @@ const HomePage = ({ setPathName }) => {
   return (
     <div className="homepage_parent">
       <div className="homepage">
-        <Fade bottom>
+        {/* <Fade bottom> */}
           <div className="homepage">
-            <ToastContainer style={{ fontSize: "2rem" }} />
+            <ToastContainer style={{fontSize:'2rem'}} />
             <h3>{adventure ? "" : "Welcome to"} </h3>
             <h1 className="homepage_title">
               {adventure ? "The treasure is here" : "Treasure Hunt"}
@@ -82,7 +82,7 @@ const HomePage = ({ setPathName }) => {
               name={"Join adventure"}
             />
           )}
-        </Fade>
+        {/* </Fade> */}
       </div>
       <Footer />
     </div>

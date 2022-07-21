@@ -52,7 +52,7 @@ const HomePage = ({ setPathName }) => {
 
           <h4>
             {adventure
-              ? " Search with our team members FirstName to find the treasure"
+              ? " Search with your team members FirstName to find the treasure"
               : `Click on "Join Adventure" to start hunting`}
           </h4>
           {adventure ? (

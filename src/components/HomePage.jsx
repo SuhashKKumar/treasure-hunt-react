@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/HomePage.css";
-import Button from "./Buttons";
+import Buttons from "./Buttons";
 import Footer from "./Footer";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -18,7 +18,7 @@ const HomePage = ({ setPathName }) => {
     setName(e.target.value);
   };
   const SearchHandler = () => {
-    setPathName(name);
+    setPathName(name.toLowerCase());
     if (name === "") {
       toast.warn("Please enter valid value!", {
         position: "top-right",
@@ -67,13 +67,13 @@ const HomePage = ({ setPathName }) => {
           )}
         </div>
         {adventure ? (
-          <Button
+          <Buttons
             className={"contained"}
             name={"Begin hunt"}
             CookiesHandler={SearchHandler}
           />
         ) : (
-          <Button
+          <Buttons
             CookiesHandler={StartHandler}
             className={"contained"}
             name={"Join adventure"}

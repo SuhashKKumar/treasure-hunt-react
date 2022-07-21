@@ -3,3 +3,99 @@
   /* cursor: crosshair; */
   /* cursor: ; */
 }
+html{
+  font-size: 62.5%;
+}
+@media(max-width:1280px){
+  html{
+    font-size: 61%;
+  }
+  .buttons_container Button {
+    font-size: 1.5rem !important;
+  } 
+}
+@media(max-width:998px){
+  html{
+    font-size: 58%;
+  }
+  .buttons_container Button {
+    font-size: 1.5rem !important;
+  } 
+}
+@media(max-width:768px){
+  html{
+    font-size: 55%;
+  }
+  .buttons_container Button {
+    font-size: 1.5rem !important;
+  } 
+}
+@media(max-width:640px){
+  html{
+    font-size: 50%;
+  }
+  .buttons_container Button {
+    font-size: 1rem !important;
+  } 
+}
+@media(max-width:392px){
+  html{
+    font-size: 45%;
+  }
+  .homepage h4{
+    font-size: 2rem !important;
+  }
+  .homepage Button{
+    font-size: 2.5em !important;
+  }
+  .homepage_title {
+    line-height: 9.5rem !important;
+  }
+  .treasure_path h2, .wrong_entry h2{
+    font-size: 9rem !important;
+    /* text-align: center !important;
+    align-self: center;
+    line-height: 9rem !important; */
+  }
+  .buttons_container{
+    flex-direction: column !important;
+    gap: 2rem !important;
+    /* align-self: flex-start; */
+  }
+  .buttons_container Button {
+    font-size: 2.5rem !important;
+  } 
+  .form{
+    height: 35rem !important;
+    left: -8vw !important;
+  }
+  .wrong_entry_button Button{
+    font-size: 2.5em !important;
+  }
+  .outlined{
+    font-size: 2.5em !important;
+    width: 80% !important;
+  }
+  footer{
+    margin-bottom: 2rem ;
+  }
+  .footer_para{
+    text-align: center;
+    
+  }
+  .homepage_footer{
+    font-size: 2rem !important;
+  }
+  .cookies{
+    height: 25rem !important;
+  }
+  .cookies h3{
+    font-size: 6rem !important;
+  }
+  .cookies h4{
+    font-size: 3rem !important;
+  }
+  .cookies Button{
+    font-size: 2.5em !important;
+  }
+}

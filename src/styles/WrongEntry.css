@@ -4,16 +4,21 @@
     color: #FD7C2B !important;
     font-family: "Sketsa",'Dancing Script', cursive !important;
     font-weight: 100;
-    font-size: 10rem;
+    font-size: 16rem;
     align-self: flex-end;
-    text-shadow: 6px 6px 2px #000;
+    text-shadow: 0.6rem 0.6rem 0.2rem #000;
 }
 .wrong_entry h2{
     color: #FD7C2B !important;
-    font-size: 5rem;
+    font-size: 8rem;
     font-weight: 400;
-    text-shadow: 4px 4px 2px #000;
+    text-shadow: 0.4rem 0.4rem 0.2rem #000;
+    text-align: center !important;
+    align-self: center;
+    line-height: 9rem !important;
 }
 .wrong_entry  Button{
-    justify-self: center;
+    justify-self: flex-start;
+    width: 100% !important;
+
 }

@@ -1,8 +1,8 @@
 .form_container{
     color: white !important;
     position: absolute;
-    backdrop-filter: blur(7px) saturate(146%);
-    -webkit-backdrop-filter: blur(7px) saturate(146%);
+    backdrop-filter: blur(0.7rem) saturate(146%);
+    -webkit-backdrop-filter: blur(0.7rem) saturate(146%);
     top: 0vh;
     width: 100vw;
     height: 100vh;
@@ -14,24 +14,24 @@
     position: relative;
     top: 32vh;
     left: -18vw;
-    height: 230px;
-    backdrop-filter: blur(25px) saturate(146%);
-    -webkit-backdrop-filter: blur(25px) saturate(146%);
+    height: 23rem;
+    backdrop-filter: blur(2.5rem) saturate(146%);
+    -webkit-backdrop-filter: blur(2.5rem) saturate(146%);
     background-color: rgba(253, 195, 119, 0.13);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
-    padding: 0.5rem 2rem;
+    border-radius: 1rem;
+    /* border: 1px solid rgba(255, 255, 255, 0.125); */
+    padding: 0.8rem 3.2rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 .form h3{
-    text-shadow: 4px 4px 2px #000;
+    text-shadow: 0.4rem 0.4rem 0.2rem #000;
     font-weight: 500;
     font-size: 2rem;
 }
 .form h4{
     font-weight: 200;
-    text-shadow: 5px 0px 2px #000;
+    text-shadow: 0.5rem 0rem 0.2rem #000;
     
 }

@@ -3,21 +3,26 @@
   flex-direction: column;
   align-self: end;
 }
+.homepage_child2 h6{
+  font-size: 1.07rem !important ;
+}
 footer {
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    align-content: space-around;
-    gap: 0.5rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  align-content: space-around;
+  gap: 0.9rem;
+
   }
   footer p {
-    font-size: 1rem !important ;
+    font-size: 1.6rem !important ;
+    text-align: center;
   }
 
 
 .homepage_footer {
   color: white;
   font-weight: 200;
-  margin-bottom: 1rem;
+  margin-bottom: 1.6rem;
 }

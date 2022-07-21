@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<HomePage setPathName={setPathName} />} />
         <Route exact path="/here" element={<CorrectPath />} />
-        <Route exact path={pathName} element={<WrongEntry pathName={pathName} />} />
+        <Route exact path={pathName.toLowerCase()} element={<WrongEntry pathName={pathName} />} />
         
       </Routes>
     </div>

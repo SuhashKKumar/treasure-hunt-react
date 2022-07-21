@@ -44,7 +44,7 @@ const HomePage = ({ setPathName }) => {
   return (
     <div className="homepage_parent">
       <div className="homepage">
-        {/* <Fade bottom> */}
+        <Fade bottom>
           <div className="homepage">
             <ToastContainer style={{fontSize:'2rem'}} />
             <h3>{adventure ? "" : "Welcome to"} </h3>
@@ -82,7 +82,7 @@ const HomePage = ({ setPathName }) => {
               name={"Join adventure"}
             />
           )}
-        {/* </Fade> */}
+        </Fade>
       </div>
       <Footer />
     </div>

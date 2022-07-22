@@ -52,7 +52,7 @@ const HomePage = ({ setPathName }) => {
               {adventure ? "The treasure is here" : "Treasure Hunt"}
             </h1>
 
-            <h4>
+            <h4 style={{marginBottom:'1rem'}} >
               {adventure
                 ? " Search with your team members FirstName to find the treasure"
                 : `Click on "Join Adventure" to start hunting`}

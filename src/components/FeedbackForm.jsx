@@ -16,6 +16,7 @@ const FeedbackForm = ({ form, setForm }) => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { fullName, message, email } = formFields;
   const feedbackCollection = collection(db, "contacts");
+  
 
   const FormHandler = () => {
     if (fullName && message && email) {

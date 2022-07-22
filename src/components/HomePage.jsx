@@ -11,6 +11,17 @@ const HomePage = ({ setPathName }) => {
   const [name, setName] = useState("");
   const [adventure, setAdventure] = useState(false);
   const navigate = useNavigate();
+  const toastStyle={
+    position: "top-right",
+        theme: "dark",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        closeButton: false,
+  }
 
   const StartHandler = () => {
     setAdventure(!adventure);
@@ -21,17 +32,7 @@ const HomePage = ({ setPathName }) => {
   const SearchHandler = () => {
     setPathName(name.toLowerCase());
     if (name === "") {
-      toast.warn('Fill the input field and search', {
-        position: "top-right",
-        theme: "dark",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        closeButton: false,
-        });
+      toast.warn('Fill the input field and search', toastStyle);
     } else {
       name === ""
         ? alert("please enter")

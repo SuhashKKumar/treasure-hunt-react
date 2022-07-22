@@ -16,6 +16,17 @@ const FeedbackForm = ({ form, setForm }) => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { fullName, message, email } = formFields;
   const feedbackCollection = collection(db, "contacts");
+  const toastStyle={
+  position: "top-right",
+  theme: "dark",
+  autoClose: 5000,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+  closeButton: false,
+}
   
 
   const FormHandler = () => {
@@ -26,45 +37,15 @@ const FeedbackForm = ({ form, setForm }) => {
         message: message,
       })
         .then(() => {
-          toast.success("Thanks for the feedback", {
-            position: "top-right",
-            theme: "dark",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            closeButton: false,
-          });
+          toast.success("Thanks for the feedback", toastStyle);
         })
         .catch((error) => {
-          toast.error(error.message, {
-            position: "top-right",
-            theme: "dark",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            closeButton: false,
-          });
+          toast.error(error.message, toastStyle);
         });
       setFormFields(defaultFormFields);
       // setForm(!form);
     } else {
-      toast.warn("Please fill the fields", {
-        position: "top-right",
-        theme: "dark",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        closeButton: false,
-      });
+      toast.warn("Please fill the fields", toastStyle);
     }
   };
   const closeHandler = () => {

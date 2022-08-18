@@ -24,7 +24,7 @@ const reducer=(state, action)=>{
 }
 const FeedbackForm = ({ form, setForm }) => {
   const [updatedState, dispatch]=useReducer(reducer, defaultFormFields)
-  const { fullName, message, email } = updatedState;
+  var { fullName, message, email } = updatedState;
 
   const toastStyle={
     position: "top-right",

@@ -30,7 +30,8 @@ const HomePage = ({ setPathName }) => {
     setName(e.target.value);
   };
   const SearchHandler = () => {
-    setPathName(name.toLowerCase());
+    setPathName(name.toLowerCase().replaceAll(' ', '_'));
+    
     if (name === "") {
       toast.warn('Fill the input field and search', toastStyle);
     } else {

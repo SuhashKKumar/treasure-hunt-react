@@ -7,12 +7,13 @@ import { useState } from "react";
 function App() {
   
   const [pathName, setPathName]= useState('')
+  console.log(pathName)
   return (
     <div className="App">
       <Routes>
         <Route exact path="/" element={<HomePage setPathName={setPathName} />} />
-        <Route exact path="/here" element={<CorrectPath />} />
-        <Route exact path={pathName.toLowerCase()} element={<WrongEntry pathName={pathName} />} />
+        <Route exact path="here" element={<CorrectPath />} />
+        <Route exact path="*" element={<WrongEntry pathName={pathName} />} />
         
       </Routes>
     </div>

@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, {useReducer} from "react";
 import "../styles/FeedbackForm.css";
 import Buttons from "./Buttons";
 import { db } from "../Utils/Firebase";
@@ -7,28 +7,38 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Fade from 'react-reveal/Fade';
 
-const FeedbackForm = ({ form, setForm }) => {
-  const defaultFormFields = {
-    fullName: "",
-    message: "",
-    email: "",
-  };
-  const [formFields, setFormFields] = useState(defaultFormFields);
-  const { fullName, message, email } = formFields;
-  const feedbackCollection = collection(db, "contacts");
-  const toastStyle={
-  position: "top-right",
-  theme: "dark",
-  autoClose: 5000,
-  hideProgressBar: false,
-  closeOnClick: true,
-  pauseOnHover: true,
-  draggable: true,
-  progress: undefined,
-  closeButton: false,
-}
-  
+const defaultFormFields = {
+  fullName: "",
+  message: "",
+  email: "",
+};
+const reducer=(state, action)=>{
+  switch(action.type){
+    case 'formFields':
+      return{
+        ...state, [action.key]:action.value
+      }
+      default: return state
+  }
 
+}
+const FeedbackForm = ({ form, setForm }) => {
+  const [updatedState, dispatch]=useReducer(reducer, defaultFormFields)
+  const { fullName, message, email } = updatedState;
+
+  const toastStyle={
+    position: "top-right",
+    theme: "dark",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    closeButton: false,
+  }
+  
+  const feedbackCollection = collection(db, "contacts");
   const FormHandler = () => {
     if (fullName && message && email) {
       addDoc(feedbackCollection, {
@@ -42,8 +52,9 @@ const FeedbackForm = ({ form, setForm }) => {
         .catch((error) => {
           toast.error(error.message, toastStyle);
         });
-      setFormFields(defaultFormFields);
-      // setForm(!form);
+        fullName='';
+        message='';
+        email=''
     } else {
       toast.warn("Please fill the fields", toastStyle);
     }
@@ -53,7 +64,7 @@ const FeedbackForm = ({ form, setForm }) => {
   };
   const changeHandler = (e) => {
     const { name, value } = e.target;
-    setFormFields({ ...formFields, [name]: value });
+    dispatch({type:'formFields', value:e.target.value, key:[name]})
   };
   const styles = {
     forms: {

@@ -63,7 +63,7 @@ const FeedbackForm = ({ form, setForm }) => {
     setForm(!form);
   };
   const changeHandler = (e) => {
-    const { name, value } = e.target;
+    const { name} = e.target;
     dispatch({type:'formFields', value:e.target.value, key:[name]})
   };
   const styles = {

@@ -36,3 +36,6 @@
     text-shadow: 0.5rem 0rem 0.2rem #000;
     
 }
+.form input, .form textarea{
+    color: white;
+}

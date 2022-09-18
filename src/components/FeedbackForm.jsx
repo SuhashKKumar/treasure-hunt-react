@@ -80,7 +80,7 @@ const FeedbackForm = ({ form, setForm }) => {
       <div className="form">
         <h3>Feedback Form</h3>
         <input
-          placeholder="Name"
+          placeholder="Ex. Tony Stark"
           onChange={changeHandler}
           value={fullName}
           name="fullName"
@@ -88,7 +88,7 @@ const FeedbackForm = ({ form, setForm }) => {
           autoComplete="off"
         />
         <input
-          placeholder="Email"
+          placeholder="Ex. tony@marvel.com"
           onChange={changeHandler}
           value={email}
           name="email"

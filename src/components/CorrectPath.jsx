@@ -19,13 +19,13 @@ const CorrectPath = () => {
   return (
     <div className="treasure_path">
     <FeedbackForm form={form} setForm={setForm} />
-      <h1>Hurry</h1>
+      <h1>Hurray!</h1>
       <h2> The treasure is all yours</h2>
       <div className="buttons_container">
         <Button onClick={NavigateToHome}>Home</Button>
         <Buttons CookiesHandler={FormHandler} name={"Contact Developer"} />
       </div>
-      <ParticlesComponent />
+      <ParticlesComponent/>
       <Footer />
     </div>
   );

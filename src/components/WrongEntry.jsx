@@ -11,7 +11,7 @@ const WrongEntry = ({pathName}) => {
   return (
     <div className='homepage_parent wrong_entry' >
         <h1>Oops!</h1>
-        <h2> The treasure isn't with {pathName}</h2>
+        <h2> The treasure isn't with<br/>{pathName.replaceAll('_',' ')}</h2>
         <div className="wrong_entry_button">
         <Button  onClick={NavigateToHome} >Continue Hunting</Button>
         </div>
